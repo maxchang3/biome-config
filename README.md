@@ -1,20 +1,18 @@
 # @maxchang/biome-config
 
-[![npm](https://img.shields.io/npm/v/@maxchang/biome-config?color=444)](https://npmjs.com/package/@maxchang/biome-config)
-
-Max Chang's Biome config preset.
+[![npm](https://img.shields.io/npm/v/@maxchang/biome-config?color=444)](https://npmjs.com/package/@maxchang/biome-config) [![code style](https://img.shields.io/badge/Max_Chang-black?style=flat&logoColor=black&label=Code%20Style)](https://github.com/maxchang3/biome-config)
 
 ## Convention
 
 - Based on [recommended rules](https://biomejs.dev/linter/rules/#recommended-rules) from Biome
-- Using spaces as indentation
+- Using spaces as indentation, default 4 spaces for JS/TS
 - Sorted imports, dangling commas
 - Single quotes, semicolons as needed
 
 ## Features
 
-- Git integration, ignore the files specified in the ignore file.
 - Automatic import organization
+- Git integration, respects `.gitignore` by default
 - Customizable TypeScript, JavaScript, and JSON rules
 - Predefined ignore patterns for common files/directories
 - [Partial support](https://biomejs.dev/internals/language-support/#html-super-languages-support) for `.vue`, `.svelte`, and `.astro` files
@@ -40,7 +38,7 @@ Extend the config in your `biome.json` file:
 ```diff
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-+  "extends": ["@maxchang/biome-config"]
++ "extends": ["@maxchang/biome-config"]
 }
 ```
 
