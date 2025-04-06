@@ -9,7 +9,16 @@
       "recommended": true,
       "style": {
         "useTemplate": "off",
-        "noUnusedTemplateLiteral": "off"
+        "noUnusedTemplateLiteral": "off",
+        "noYodaExpression": "error",
+        "useConsistentBuiltinInstantiation": "error"
+      },
+      "complexity": {
+        "noForEach": "off"
+      },
+      "suspicious": {
+        "noSelfCompare": "error",
+        "useErrorMessage": "error"
       }
     }
   },
