@@ -60,7 +60,7 @@ If you use VS Code, here is a reference [`settings.json`](./.vscode/settings.jso
 
 ### Sort `package.json` keys
 
-Since Biome [has no plans](https://github.com/biomejs/biome/discussions/941#discussioncomment-7715731) to implement something like [prettier-plugin-packagejson](https://github.com/matzkoh/prettier-plugin-packagejson) and currently lacks equivalent rules such as [`jsonc/sort-keys`](https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-keys.html), you can use [sort-package-json](https://github.com/keithamus/sort-package-json) as a workaround.
+Since Biome [has no plans](https://github.com/biomejs/biome/discussions/941#discussioncomment-7715731) to implement something like [prettier-plugin-packagejson](https://github.com/matzkoh/prettier-plugin-packagejson) and currently lacks equivalent rules such as [`jsonc/sort-keys`](https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-keys.html)<sup>*</sup>, you can use [sort-package-json](https://github.com/keithamus/sort-package-json) as a workaround.
 
 ```bash
 pnpx sort-package-json
@@ -69,6 +69,10 @@ pnpx sort-package-json
 ```bash
 npx sort-package-json
 ```
+
+<small>
+* While Biome provides an assist action like [useSortedKeys](https://next.biomejs.dev/assist/actions/use-sorted-keys/#how-to-configure), it does not allow customization to sort keys in a specific order.
+</small>
 
 
 ## References
