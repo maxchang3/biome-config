@@ -71,7 +71,7 @@ npx sort-package-json
 ```
 
 <sub>
-* While Biome provides an assist action like [useSortedKeys](https://next.biomejs.dev/assist/actions/use-sorted-keys/#how-to-configure), it does not allow customization to sort keys in a specific order.
+* While Biome provides an assist action like <a href="https://next.biomejs.dev/assist/actions/use-sorted-keys/#how-to-configure)">useSortedKeys</a>, it does not allow customization to sort keys in a specific order.
 </sub>
 
 
