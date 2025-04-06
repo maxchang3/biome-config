@@ -54,7 +54,7 @@ Add following scripts to your `package.json`:
 ```
 
 
-If you are using VS Code, here is a reference [`settings.json`](./vscode/settings.json), with automatic formatting on save and Biome as the default formatter for languages needed.
+If you are using VS Code, here is a reference [`settings.json`](./.vscode/settings.json), with automatic formatting on save and Biome as the default formatter for languages needed.
 
 ## Recipes
 
