@@ -70,9 +70,9 @@ pnpx sort-package-json
 npx sort-package-json
 ```
 
-<small>
+<sub>
 * While Biome provides an assist action like [useSortedKeys](https://next.biomejs.dev/assist/actions/use-sorted-keys/#how-to-configure), it does not allow customization to sort keys in a specific order.
-</small>
+</sub>
 
 
 ## References
