@@ -13,7 +13,7 @@ Max Chang's Biome config preset.
 
 ## Features
 
-- Git integration
+- Git integration, ignore the files specified in the ignore file.
 - Automatic import organization
 - Customizable TypeScript, JavaScript, and JSON rules
 - Predefined ignore patterns for common files/directories
