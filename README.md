@@ -6,7 +6,7 @@ Max Chang's Biome config preset.
 
 ## Convention
 
-- Use recommended rules from [Biome](https://biomejs.dev/linter/rules/#recommended-rules)
+- Based on [recommended rules](https://biomejs.dev/linter/rules/#recommended-rules) from Biome
 - Using spaces as indentation
 - Sorted imports, dangling commas
 - Single quotes, semicolons as needed
