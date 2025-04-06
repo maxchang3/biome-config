@@ -75,4 +75,6 @@ npx sort-package-json
 
 ## References
 
-[stacksjs/biome-config](https://github.com/stacksjs/biome-config)
+- [stacksjs/biome-config](https://github.com/stacksjs/biome-config)
+- [antfu/eslint-config](https://github.com/antfu/eslint-config)
+- [maxchang3/eslint-config](https://github.com/maxchang3/eslint-config)
