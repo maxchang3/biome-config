@@ -15,9 +15,9 @@ Max Chang's Biome config preset.
 
 - Git integration
 - Automatic import organization
-- Customizable TypeScript, JavaScript, JSON rules
+- Customizable TypeScript, JavaScript, and JSON rules
 - Predefined ignore patterns for common files/directories
-- [Partial support](https://biomejs.dev/internals/language-support/#html-super-languages-support) for `.vue`, `.svelte` and `.astro` files
+- [Partial support](https://biomejs.dev/internals/language-support/#html-super-languages-support) for `.vue`, `.svelte`, and `.astro` files
 
 ## Usage
 
@@ -44,7 +44,7 @@ Extend the config in your `biome.json` file:
 }
 ```
 
-Add following scripts to your `package.json`:
+Add the following scripts to your `package.json`:
 
 ```json
 "scripts": {
@@ -54,7 +54,7 @@ Add following scripts to your `package.json`:
 ```
 
 
-If you are using VS Code, here is a reference [`settings.json`](./.vscode/settings.json), with automatic formatting on save and Biome as the default formatter for languages needed.
+If you use VS Code, here is a reference [`settings.json`](./.vscode/settings.json), with automatic formatting on save and Biome as the default formatter for languages needed.
 
 ## Recipes
 
