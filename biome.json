@@ -11,14 +11,19 @@
         "useTemplate": "off",
         "noUnusedTemplateLiteral": "off",
         "noYodaExpression": "error",
-        "useConsistentBuiltinInstantiation": "error"
+        "useConsistentBuiltinInstantiation": "error",
+        "noNonNullAssertion": "off"
       },
       "complexity": {
         "noForEach": "off"
       },
       "suspicious": {
         "noSelfCompare": "error",
-        "useErrorMessage": "error"
+        "useErrorMessage": "error",
+        "noArrayIndexKey": "off"
+      },
+      "correctness": {
+        "noUnusedImports": "error"
       }
     }
   },
