@@ -1,6 +1,6 @@
 # @maxchang/biome-config
 
-[![npm](https://img.shields.io/npm/v/@maxchang/biome-config?color=444)](https://npmjs.com/package/@maxchang/biome-config) [![code style](https://img.shields.io/badge/Max_Chang-black?style=flat&logoColor=black&label=Code%20Style)](https://github.com/maxchang3/biome-config)
+[![npm](https://img.shields.io/npm/v/@maxchang/biome-config?color=444)](https://npmjs.com/package/@maxchang/biome-config) [![code style](https://img.shields.io/badge/Max_Chang-black?style=flat&logoColor=black&label=Code%20Style)](https://github.com/maxchang3/biome-config) <sup><s>(Is that really a thing?)</s></sup>
 
 ## Convention
 
