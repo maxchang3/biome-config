@@ -37,10 +37,10 @@ npm i @maxchang/biome-config --save-dev
 
 Extend the config in your `biome.json` file:
 
-```diff
+```json
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-+ "extends": ["@maxchang/biome-config"]
+  "extends": ["@maxchang/biome-config"]
 }
 ```
 
