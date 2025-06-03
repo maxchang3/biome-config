@@ -46,6 +46,7 @@
     }
   },
   "overrides": [
+    // https://biomejs.dev/internals/language-support/#html-super-languages-support
     {
       "include": ["*.svelte", "*.astro", "*.vue"],
       "linter": {
