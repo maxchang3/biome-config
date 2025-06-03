@@ -1,6 +1,6 @@
 {
   "name": "@maxchang/biome-config",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Max Chang's Biome config",
   "keywords": ["biome", "biome-config", "eslint", "prettier", "linter", "formatter"],
   "homepage": "https://github.com/maxchang3/biome-config",
