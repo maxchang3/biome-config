@@ -58,6 +58,17 @@
         }
       }
     },
+    // https://github.com/biomejs/biome/issues/1719
+    {
+      "include": ["*.astro"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedImports": "off"
+          }
+        }
+      }
+    },
     {
       "include": [".vscode/**", "components.d.ts"],
       "json": {
