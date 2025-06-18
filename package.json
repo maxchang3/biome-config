@@ -32,5 +32,8 @@
   "devDependencies": {
     "@biomejs/biome": "^2.0.0",
     "bumpp": "^10.1.0"
+  },
+  "peerDependencies": {
+    "@biomejs/biome": "^2.0.0"
   }
 }
