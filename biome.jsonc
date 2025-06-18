@@ -1,8 +1,6 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
+  "$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
@@ -48,7 +46,7 @@
   "overrides": [
     // https://biomejs.dev/internals/language-support/#html-super-languages-support
     {
-      "include": ["*.svelte", "*.astro", "*.vue"],
+      "includes": ["**/*.svelte", "**/*.astro", "**/*.vue"],
       "linter": {
         "rules": {
           "style": {
@@ -60,7 +58,7 @@
     },
     // https://github.com/biomejs/biome/issues/1719
     {
-      "include": ["*.astro"],
+      "includes": ["**/*.astro"],
       "linter": {
         "rules": {
           "correctness": {
@@ -70,7 +68,7 @@
       }
     },
     {
-      "include": [".vscode/**", "components.d.ts"],
+      "includes": ["**/.vscode/**", "**/components.d.ts"],
       "json": {
         "parser": {
           "allowComments": true
@@ -85,6 +83,6 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": [".astro", "dist"]
+    "includes": ["**", "!**/.astro", "!**/dist"]
   }
 }
