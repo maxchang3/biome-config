@@ -18,7 +18,6 @@ export default {
  * - Scoped packages: {{ devdeps."@biomejs/biome" }}
  * - Scripts: {{ scripts.build }}, {{ scripts."build:dev" }}
  * - Automatically removes ^ or ~ prefix from version strings
- * - Preserves original template, appends generated content after <!-- template:end -->
  *
  * @returns {import('automd').Generator}
  */
