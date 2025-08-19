@@ -19,16 +19,10 @@ export default {
  * - Scripts: {{ scripts.build }}, {{ scripts."build:dev" }}
  * - Automatically removes ^ or ~ prefix from version strings
  *
- * @returns {import('automd').Generator}
  */
 function pkgGenerator() {
     return defineGenerator({
         name: 'pkg',
-        /**
-         * Generate template content from package.json
-         * @param {{ args: { file: string }, block: { contents: string } }} ctx
-         * @returns {Promise<{ contents: string }>}
-         */
         async generate({ args, block }) {
             if (!args.file) throw new Error('file is required')
 
@@ -53,7 +47,6 @@ function pkgGenerator() {
  * Simple template replacement
  * @param {string} str - Template string
  * @param {object} pkg - Parsed package.json object
- * @returns {string} - Processed string
  */
 function template(str, pkg) {
     const regex = /\{\{\s*([^}]+)\s*\}\}/g
