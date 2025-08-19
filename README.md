@@ -55,7 +55,7 @@ deno install --dev @maxchang/biome-config
 
 Extend the config in your `biome.json` file:
 
-<!-- automd:pkg file=./package.json code -->
+<!-- automd:pkg file=./package.json -->
 
 <!-- template
 ```json
@@ -76,7 +76,7 @@ Extend the config in your `biome.json` file:
 
 Add the following scripts to your `package.json`:
 
-<!-- automd:pkg file=./package.json code -->
+<!-- automd:pkg file=./package.json -->
 
 <!-- template
 ```json
