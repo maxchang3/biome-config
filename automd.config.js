@@ -33,11 +33,10 @@ function pkgGenerator() {
             if (!args.file) throw new Error('file is required')
 
             const pkg = JSON.parse(await fs.readFile(args.file, 'utf-8'))
-            // Extract only the content between <!-- template and -->
+
+            // Extract only the content between `<!-- template` and `-->`
             const match = block.contents.match(/<!-- template([\s\S]*?)-->/)
-            if (!match) {
-                throw new Error('Template markers <!-- template ... --> not found')
-            }
+            if (!match) throw new Error('Template markers <!-- template ... --> not found')
             const templateStr = match[1]
 
             // Generate processed template
