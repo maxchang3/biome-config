@@ -30,11 +30,11 @@
     "release": "bumpp && pnpm publish --access public"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.0",
-    "automd": "^0.4.0",
-    "bumpp": "^10.2.3"
+    "@biomejs/biome": "^2.2.5",
+    "automd": "^0.4.2",
+    "bumpp": "^10.3.1"
   },
   "peerDependencies": {
-    "@biomejs/biome": "^2.2.0"
+    "@biomejs/biome": "^2.2.5"
   }
 }
