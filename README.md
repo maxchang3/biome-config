@@ -42,13 +42,13 @@ npm install -D @maxchang/biome-config
 yarn add -D @maxchang/biome-config
 
 # pnpm
-pnpm install -D @maxchang/biome-config
+pnpm add -D @maxchang/biome-config
 
 # bun
 bun install -D @maxchang/biome-config
 
 # deno
-deno install --dev @maxchang/biome-config
+deno install --dev npm:@maxchang/biome-config
 ```
 
 <!-- /automd -->
@@ -67,7 +67,7 @@ Extend the config in your `biome.json` file:
 -->
 ```json
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
   "extends": ["@maxchang/biome-config"],
 }
 ```
