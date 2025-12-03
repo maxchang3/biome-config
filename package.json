@@ -27,7 +27,8 @@
   "scripts": {
     "lint": "biome check",
     "lint:fix": "biome check --write .",
-    "release": "pnpx automd && bumpp && pnpm publish --access public"
+    "update-readme": "automd",
+    "release": "bumpp && pnpm publish --access public"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.8",
