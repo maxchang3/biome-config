@@ -164,6 +164,67 @@ deno run -A npm:sort-package-json@latest
 * While Biome provides an assist action like <a href="https://next.biomejs.dev/assist/actions/use-sorted-keys/#how-to-configure">useSortedKeys</a>, it does not allow customization to sort keys in a specific order.
 </sub>
 
+### Git Hooks
+I recommend using [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) with [lint-staged](https://github.com/okonet/lint-staged) to run Biome checks before committing code.
+
+Install the required dependencies:
+
+<!-- automd:pm-install name="simple-git-hooks lint-staged" dev -->
+
+```sh
+# ✨ Auto-detect
+npx nypm install -D "simple-git-hooks
+
+# npm
+npm install -D "simple-git-hooks
+
+# yarn
+yarn add -D "simple-git-hooks
+
+# pnpm
+pnpm add -D "simple-git-hooks
+
+# bun
+bun install -D "simple-git-hooks
+
+# deno
+deno install --dev npm:"simple-git-hooks
+```
+
+<!-- /automd -->
+
+Add the following configuration to your `package.json`:
+
+```json
+{
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "biome check --no-errors-on-unmatched --files-ignore-unknown=true"
+  }
+}
+```
+
+then initialize the git hooks:
+
+<!-- automd:pm-x version="latest" name="simple-git-hooks" -->
+
+```sh
+# npm
+npx simple-git-hooks@latest
+
+# pnpm
+pnpm dlx simple-git-hooks@latest
+
+# bun
+bunx simple-git-hooks@latest
+
+# deno
+deno run -A npm:simple-git-hooks@latest
+```
+
+<!-- /automd -->
 
 ## References
 
