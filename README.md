@@ -67,7 +67,7 @@ Extend the config in your `biome.json` file:
 -->
 ```json
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
   "extends": ["@maxchang/biome-config"],
 }
 ```
