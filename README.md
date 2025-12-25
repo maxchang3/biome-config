@@ -169,29 +169,25 @@ I recommend using [simple-git-hooks](https://github.com/toplenboren/simple-git-h
 
 Install the required dependencies:
 
-<!-- automd:pm-install name="simple-git-hooks lint-staged" dev -->
-
 ```sh
 # ✨ Auto-detect
-npx nypm install -D "simple-git-hooks
+npx nypm install -D simple-git-hooks lint-staged
 
 # npm
-npm install -D "simple-git-hooks
+npm install -D simple-git-hooks lint-staged
 
 # yarn
-yarn add -D "simple-git-hooks
+yarn add -D simple-git-hooks lint-staged
 
 # pnpm
-pnpm add -D "simple-git-hooks
+pnpm add -D simple-git-hooks lint-staged
 
 # bun
-bun install -D "simple-git-hooks
+bun install -D simple-git-hooks lint-staged
 
 # deno
-deno install --dev npm:"simple-git-hooks
+deno install --dev npm:simple-git-hooks lint-staged
 ```
-
-<!-- /automd -->
 
 Add the following configuration to your `package.json`:
 
