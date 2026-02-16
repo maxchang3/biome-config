@@ -32,7 +32,6 @@
   },
   "javascript": {
     "formatter": {
-      "indentWidth": 4,
       "quoteStyle": "single",
       "trailingCommas": "es5",
       "semicolons": "asNeeded"

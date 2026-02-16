@@ -13,7 +13,7 @@
 ## Convention
 
 - Based on [recommended rules](https://biomejs.dev/linter/rules/#recommended-rules) from Biome
-- Using spaces as indentation, default 4 spaces for JS/TS
+- Using spaces as indentation.
 - Sorted imports, dangling commas
 - Single quotes, semicolons as needed
 

@@ -3,10 +3,10 @@ import { defineGenerator } from 'automd'
 
 /** @type {import("automd").Config} */
 export default {
-    file: 'README.md',
-    generators: {
-        pkg: pkgGenerator(),
-    },
+  file: 'README.md',
+  generators: {
+    pkg: pkgGenerator(),
+  },
 }
 
 /**
@@ -21,26 +21,26 @@ export default {
  *
  */
 function pkgGenerator() {
-    return defineGenerator({
-        name: 'pkg',
-        async generate({ args, block }) {
-            if (!args.file) throw new Error('file is required')
+  return defineGenerator({
+    name: 'pkg',
+    async generate({ args, block }) {
+      if (!args.file) throw new Error('file is required')
 
-            const pkg = JSON.parse(await fs.readFile(args.file, 'utf-8'))
+      const pkg = JSON.parse(await fs.readFile(args.file, 'utf-8'))
 
-            // Extract only the content between `<!-- template` and `-->`
-            const match = block.contents.match(/<!-- template([\s\S]*?)-->/)
-            if (!match) throw new Error('Template markers <!-- template ... --> not found')
-            const templateStr = match[1]
+      // Extract only the content between `<!-- template` and `-->`
+      const match = block.contents.match(/<!-- template([\s\S]*?)-->/)
+      if (!match) throw new Error('Template markers <!-- template ... --> not found')
+      const templateStr = match[1]
 
-            // Generate processed template
-            const generated = template(templateStr, pkg)
+      // Generate processed template
+      const generated = template(templateStr, pkg)
 
-            return {
-                contents: `<!-- template${templateStr}-->${generated}\n`,
-            }
-        },
-    })
+      return {
+        contents: `<!-- template${templateStr}-->${generated}\n`,
+      }
+    },
+  })
 }
 
 /**
@@ -49,11 +49,11 @@ function pkgGenerator() {
  * @param {object} pkg - Parsed package.json object
  */
 function template(str, pkg) {
-    const regex = /\{\{\s*([^}]+)\s*\}\}/g
-    return str.replace(regex, (_, path) => {
-        const val = getPkgValue(pkg, path)
-        return val != null ? val : ''
-    })
+  const regex = /\{\{\s*([^}]+)\s*\}\}/g
+  return str.replace(regex, (_, path) => {
+    const val = getPkgValue(pkg, path)
+    return val != null ? val : ''
+  })
 }
 
 /**
@@ -64,14 +64,14 @@ function template(str, pkg) {
  * @returns {string|undefined} - Value at path or undefined
  */
 function getPkgValue(obj, path) {
-    path = path.trim()
-    if (path.startsWith('deps.')) path = 'dependencies.' + path.slice(5)
-    if (path.startsWith('devdeps.')) path = 'devDependencies.' + path.slice(8)
+  path = path.trim()
+  if (path.startsWith('deps.')) path = 'dependencies.' + path.slice(5)
+  if (path.startsWith('devdeps.')) path = 'devDependencies.' + path.slice(8)
 
-    // Split path by dot, respecting quoted keys
-    const parts = path.match(/(?:[^."']+|"(?:[^"]+)"|'(?:[^']+)')/g)?.map((k) => k.replace(/^['"]|['"]$/g, '')) || []
+  // Split path by dot, respecting quoted keys
+  const parts = path.match(/(?:[^."']+|"(?:[^"]+)"|'(?:[^']+)')/g)?.map((k) => k.replace(/^['"]|['"]$/g, '')) || []
 
-    let val = parts.reduce((acc, key) => acc?.[key], obj)
-    if (typeof val === 'string') val = val.replace(/^[\^~]/, '') // Remove ^ or ~ prefix
-    return val
+  let val = parts.reduce((acc, key) => acc?.[key], obj)
+  if (typeof val === 'string') val = val.replace(/^[\^~]/, '') // Remove ^ or ~ prefix
+  return val
 }
