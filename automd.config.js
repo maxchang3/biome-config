@@ -3,7 +3,6 @@ import { defineGenerator } from 'automd'
 
 /** @type {import("automd").Config} */
 export default {
-  file: 'README.md',
   generators: {
     pkg: pkgGenerator(),
   },

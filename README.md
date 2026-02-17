@@ -30,99 +30,99 @@
 > [!TIP]
 > Not sure how to set up Biome? Take a look at the [Getting Started](https://biomejs.dev/guides/getting-started/) guide from the official docs.
 
-1. Install Biome as a development dependency if you haven't already:
+Install Biome as a development dependency if you haven't already:
 
-   <!-- automd:pm-install name="@biomejs/biome" dev -->
+<!-- automd:pm-install name="@biomejs/biome" dev -->
 
-   ```sh
-   # ✨ Auto-detect
-   npx nypm install -D @biomejs/biome
+```sh
+# ✨ Auto-detect
+npx nypm install -D @biomejs/biome
 
-   # npm
-   npm install -D @biomejs/biome
+# npm
+npm install -D @biomejs/biome
 
-   # yarn
-   yarn add -D @biomejs/biome
+# yarn
+yarn add -D @biomejs/biome
 
-   # pnpm
-   pnpm add -D @biomejs/biome
+# pnpm
+pnpm add -D @biomejs/biome
 
-   # bun
-   bun install -D @biomejs/biome
+# bun
+bun install -D @biomejs/biome
 
-   # deno
-   deno install --dev npm:@biomejs/biome
-   ```
+# deno
+deno install --dev npm:@biomejs/biome
+```
 
-   <!-- /automd -->
+<!-- /automd -->
 
-2. Install the config package as a development dependency:
+Install the config package as a development dependency:
 
-   <!-- automd:pm-install name="@maxchang/biome-config" dev -->
+<!-- automd:pm-install name="@maxchang/biome-config" dev -->
 
-   ```sh
-   # ✨ Auto-detect
-   npx nypm install -D @maxchang/biome-config
+```sh
+# ✨ Auto-detect
+npx nypm install -D @maxchang/biome-config
 
-   # npm
-   npm install -D @maxchang/biome-config
+# npm
+npm install -D @maxchang/biome-config
 
-   # yarn
-   yarn add -D @maxchang/biome-config
+# yarn
+yarn add -D @maxchang/biome-config
 
-   # pnpm
-   pnpm add -D @maxchang/biome-config
+# pnpm
+pnpm add -D @maxchang/biome-config
 
-   # bun
-   bun install -D @maxchang/biome-config
+# bun
+bun install -D @maxchang/biome-config
 
-   # deno
-   deno install --dev npm:@maxchang/biome-config
-   ```
+# deno
+deno install --dev npm:@maxchang/biome-config
+```
 
-   <!-- /automd -->
+<!-- /automd -->
 
-3. Extend the config in your `biome.json` file:
+Extend the config in your `biome.json` file:
 
-   <!-- automd:pkg file=./package.json -->
+<!-- automd:pkg file=./package.json -->
 
-   <!-- template
-   ```json
-   {
-     "$schema": "https://biomejs.dev/schemas/{{ devdeps."@biomejs/biome" }}/schema.json",
-     "extends": ["{{ name }}"],
-   }
-   ```
-   -->
-   ```json
-   {
-     "$schema": "https://biomejs.dev/schemas/2.3.13/schema.json",
-     "extends": ["@maxchang/biome-config"],
-   }
-   ```
+<!-- template
+```json
+{
+  "$schema": "https://biomejs.dev/schemas/{{ devdeps."@biomejs/biome" }}/schema.json",
+  "extends": ["{{ name }}"],
+}
+```
+-->
+```json
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.2/schema.json",
+  "extends": ["@maxchang/biome-config"],
+}
+```
 
-   <!-- /automd -->
+<!-- /automd -->
 
-4. Add the following scripts to your `package.json`:
+Add the following scripts to your `package.json`:
 
-   <!-- automd:pkg file=./package.json -->
+<!-- automd:pkg file=./package.json -->
 
-   <!-- template
-   ```json
-   "scripts": {
-     "lint": "{{ scripts.lint }}",
-     "lint:fix": "{{ scripts.lint:fix }}"
-   }
-   ```
-   -->
-   ```json
-   "scripts": {
-     "lint": "biome check",
-     "lint:fix": "biome check --write ."
-   }
-   ```
+<!-- template
+```json
+"scripts": {
+  "lint": "{{ scripts.lint }}",
+  "lint:fix": "{{ scripts.lint:fix }}"
+}
+```
+-->
+```json
+"scripts": {
+  "lint": "biome check",
+  "lint:fix": "biome check --write ."
+}
+```
 
-   <!-- /automd -->
+<!-- /automd -->
 
 
 ## Recipes
